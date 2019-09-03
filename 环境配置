@@ -1,0 +1,21 @@
+###jdk###
+系统变量→新建 JAVA_HOME 变量 。
+变量值填写jdk的安装目录（本人是 E:\Java\jdk1.7.0)
+系统变量→新建 CLASSPATH 变量
+变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）
+系统变量→寻找 Path 变量→编辑
+在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+
+##maven##
+1 添加新的系统环境变量MAVEN_HOME， 并设置其值为你安装的目录 MAVEN_HOME= D:\Softwares\apache-maven-3.2.2
+2 更新系统PATH 变量，添加;%MAVEN_HOME%\bin;到尾部
+maven编译
+mvn clean install spring-boot:run -Dmaven.test.skip
+mvn clean install -Dmaven.test.skip
+
+
+##tomcat##
+1，新建变量名：CATALINA_BASE，变量值：C:\tomcat
+2，新建变量名：CATALINA_HOME，变量值：C:\tomcat
+3，打开PATH，添加变量值：%CATALINA_HOME%\lib;%CATALINA_HOME%\bin
+
